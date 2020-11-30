@@ -1,5 +1,5 @@
 
-docs/v1.9.10/libfilament-jni.so:     file format elf64-little
+libfilament-jni.so:     file format elf64-little
 
 Sections:
 Idx Name          Size      VMA               LMA               File off  Algn
@@ -53,3 +53,21 @@ Idx Name          Size      VMA               LMA               File off  Algn
                   ALLOC
  24 .comment      000000dc  0000000000000000  0000000000000000  001c7030  2**0
                   CONTENTS, READONLY
+ 25 .debug_aranges 00000060  0000000000000000  0000000000000000  001c710c  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 26 .debug_info   00fd0887  0000000000000000  0000000000000000  001c716c  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 27 .debug_abbrev 0003ade3  0000000000000000  0000000000000000  011979f3  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 28 .debug_line   001363f5  0000000000000000  0000000000000000  011d27d6  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 29 .debug_frame  00004068  0000000000000000  0000000000000000  01308bd0  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 30 .debug_str    005d590b  0000000000000000  0000000000000000  0130cc38  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 31 .debug_loc    002fdc17  0000000000000000  0000000000000000  018e2543  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 32 .debug_macinfo 0000009d  0000000000000000  0000000000000000  01be015a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 33 .debug_ranges 000e9010  0000000000000000  0000000000000000  01be01f7  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS

@@ -1,16 +1,18 @@
 # Build the image:
-#   docker build --no-cache --tag filasize .
+#   docker build --tag filasize .
 #
 # Run the image and mount the current directory:
 #   docker run -it -v `pwd`:/trees -t filasize
 #
 # Type the following commands into your shell:
+#   cd webtreemap ; yarn install && yarn build ; cd -
 #   export BLOATPY=`pwd`/bloat/bloat.py
 #   export TARGET=libfilament-jni.so
 #   cd docs/v1.9.10
-#   nm -C -S -l $TARGET > $DIR/nm.out
-#   objdump -h $TARGET > $DIR/objdump.out
+#   nm -C -S -l $TARGET > nm.out
+#   objdump -h $TARGET > objdump.out
 #   $BLOATPY syms > bloat.json
+#   cp ../../index.html .
 
 FROM ubuntu:focal
 WORKDIR /trees
@@ -26,7 +28,9 @@ RUN apt-get update && \
 	libc++-7-dev \
 	libc++abi-7-dev \
 	python \
-	python3
+	python3 \
+	curl \
+	gnupg2
 
 RUN set -eux ;\
     update-alternatives --install /usr/bin/clang clang /usr/bin/clang-7 100 ;\
@@ -36,3 +40,8 @@ RUN set -eux ;\
 
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 RUN apt-get install -y nodejs
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get install -y yarn
+RUN yarn global add webtreemap
+RUN yarn global add typescript
