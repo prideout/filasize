@@ -5,7 +5,6 @@
 #   docker run -it -v `pwd`:/trees -t filasize
 #
 # Type the following commands into your shell:
-#   cd webtreemap ; yarn install && yarn build ; cd -
 #   export BLOATPY=`pwd`/bloat/bloat.py
 #   export TARGET=libfilament-jni.so
 #   cd docs/v1.9.10
