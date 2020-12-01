@@ -1,0 +1,210 @@
+77aec40a5 Prepare Filament v.1.8.0 (#2787)
+25d42c939 filagui: publicize the low-level draw data handler.
+1ad6bccbc Vulkan: add support for input attachment descriptors.
+3c1ea0750 Add Metal support for Texture::import (#2782)
+07e4d1c14 Fix TypeScript error for the Render Fidelity folks.
+181688342 Some infrastructure to support arbitrary shaped diaphragm
+6a6775ebe fix typo in IBL computation comment
+767764e4f Swizzle textures when swizzle is enabled, not the other way around (#2779)
+d3f6ce699 Minor fixes for "matinfo --web-server"
+96032eada Vulkan code cleanup.
+c8aad378c Vulkan: add support for MRT.
+c067d76d1 Add View::getVisibleLayers()
+630f816e7 Remove iostream from GLX backend (#2774)
+bbf37a548 Add error message when parsing material with missing backend (#2766)
+a07894ca9 Fix gltf_viewer crash when switching models with glTF cameras (#2767)
+e03c663bc filament.d.ts make init, fetch callbacks optional
+1af254db4 Add matc support for command-line preprocessor defines (#2760)
+7621f7e83 Vulkan: fix SSAO by removing bogus workaround.
+d7cd247df matdbg: auto-select variant when clicking a material.
+9a58bf246 matdbg: support scenes that have many materials.
+7ee127979 Vulkan: add diagnostics to check if format is sampleable.
+7131bbf62 Fix VS 2019 build failure with Vulkan (#2758)
+820f551ee filamat: Resolve string processing inefficiency (#2754)
+a6872c840 Silence more deprecation warnings (#2750)
+c0452b5e9 JS: Update API for Camera construction / destruction.
+b136b4aca JS: Temp workaround for bloom binding error.
+59cf9e3b7 JS: Fix typo in bindings for bloom options.
+7ca508cb7 ssao: optimize sin/cos per sample
+96feea1de Avoid deprecated API in the root README.
+c5acacff6 Vulkan: add note about #1532.
+92f2004c4 Improve matc error reporting (#2741)
+aed8c7fcb DoF: make all function parameter const
+29f50e0fe Vulkan: fix intermittent InvalidQuery on Android.
+2aeb33b26 Fix Windows build
+132e94b3b Add vignette post-processing effect (#2743)
+f7f86a7c5 Remove skygen
+4a3984692 Flush pending command buffer in Metal terminate (#2737)
+c87cffd57 Transition to PRESENT layout only once per frame.
+4bbc0c05c Allow LOAD_OP_LOAD when rendering to swap chain.
+697b1b690 Fix intermittent InvalidImageLayout error for main depth buffer.
+d3f5164fc New DoF implementation (#2700)
+8882132f4 fix a use after free in filamat
+89a859271 Fix, incorrect camera view matrix with non-rigid transformations (#2735)
+9d35aff2d Vulkan: fix bloom on Android by supporting LOAD_OP_LOAD.
+c6e7382cb Update README.md
+0be094cd4 Update TypeScipt declarations
+81c60c4ef Remove use of deprecated APIs in libfilamentapp (#2729)
+456e05775 texelFetch w/ LOD requires at least MIPMAP_NEAREST
+ab1288188 Remove camutils dependency on utils (#2727)
+efaf02ca6 CMake: fix macOS build break.
+8f7b25088 CMake: build matdbg / civetweb only when enabled.
+8f4ffbc78 gltfio: various improvements to skinning normalization.
+455bed917 Fix typescript missing options parameter for createTextureFromX
+d5033b585 Silence warnings in public headers (#2722)
+cf5b6ccba Use MAX_MORPH_TARGETS instead of magic number.
+42c80d5d5 Fix CUBICSPLINE interpolation for morph weights.
+2b92b5e06 gltf_viewer: move "Animation" UI
+1762baab6 Remove unused SPIRV-Tools-shared library (#2719)
+ab98548e7 Fix iOS projects build (#2718)
+5e2c9e3af Create universal libraries for iOS releases (#2717)
+b8ece355d Install Filament LICENSE alongside README (#2712)
+79fb878fb Update build instructions link (#2711)
+026298182 Fix gltfio-java build errors on Windows (#2709)
+a79effc78 Page Curl: fix CPU animation.
+66471ee99 Page Curl: add configurable curl style.
+1fc57b8bf Add bitcode to iOS builds (#2708)
+6b5d21639 gltf_viewer: collapse all UI panels by default
+d70e31706 Use local iOS toolchain instead of downloading (#2705)
+a5c49cc1b Improve JS API for Scene::addEntities.
+ce995d021 Improve JS API for SurfaceOrientation helper. (#2706)
+9cd2f2edc Check in pristine copy of Clang iOS toolchain (#2703)
+5c64ed512 gltfio: use highp for UV coords.
+623cd1a5f Remove PDB and ILK files when building for Windows CI (#2698)
+94776a01b Add JNI bindings for gltfio camera (#2693)
+f462eafed Update workflows from master branch to main (#2697)
+7d1dbba2b Rename reference from master to main
+8c9cc988a Update references to master with references to main
+7a1d9968a Check if an existing material parameter is a sampler (#2694)
+56682794d Update getTime() documentation
+87ee5783b export_graphviz() now includes name string.
+7a1c07905 Use an int, not byte, for variantFilter (#2691)
+242e8d1b5 Update live JS demos and tutorials.
+42d55f226 Support Metal in the iOS simulator (#2678)
+25b43d7c2 iOS samples: set opaque = YES on CAMetalLayer (#2675)
+de3f75701 Add JS bindings to gltfio camera funcs (#2681)
+ebd195f8e matdbg: Add support for Android.
+a2ce57ade Fir applyAnimation() when scale is close or equal to 0
+7a78ccd18 Turn off Windows DEBUG builds for continuous builds (#2682)
+963a8958e Fix Ubuntu build.
+899ac1224 gltfio: Add Java bindings for desktop.
+a019de336 Add (improved) color grading UI to gltf-viewer (#2676)
+79c83f509 Fix Metal bug not creating default depth attachment (#2677)
+fde2d2e48 Fix MeshReader material bug (#2674)
+b2c63b6cd Add support to gltfio for glTF cameras (#2663)
+1f9d073a6 gltfio: enable unused UV attributes when possible.
+fa0f5e050 Prep the build for multi-platform matdbg.
+fee6a2f07 Miscellaneous matdbg improvements
+19a212389 Perform non-ACES grading in BT.2020 (#2662)
+1b1ef591a fix typo that prevented fxaa to work properly (#2667)
+b0acb3216 eglInitialize requires a non-null IntArray reference and different offsets for major and minor. (#2668)
+10e1aaadf Vulkan: fix mipmap generation on Android.
+00b522669 minor fixes for matdbg
+f125e1730 Throw Java exception when using destroyed Animator.
+18776fc43 SamplerType JNI definition was out of step with the native definition. (#2658)
+4bf21876b Add new color grading feature, vibrance (#2656)
+1feca2347 don't attempt to call Android private APIs
+b4d2a1991 Add new curves color grading tool (#2651)
+3e6ee4ca5 Fix libimageio's HDR format decoder (#2653)
+ee6ddf675 syscall (futex) errors are returned in errno
+7e6c38d09 Fix: cannot use parts index for material index. (#2652)
+7a8755b5b Implement framebuffer fetch for Metal backend (#2648)
+6461370cb more debug code to help catch an ANR
+e56882d20 Update tinyexr to 944c740 (#2644)
+43f7bad8a Kotlin cleanup
+31bdb6104 Add PQ transfer functions
+2fcca9677 Add Ushimura tone mapping operator
+a4094193c gltfio: fix AABB when instancing is enabled
+1935598a7 Add Java bindings for ColorGrading (#2638)
+6c3b7a228 Update RELEASE_NOTES.md
+23b62e2d1 Add ASC CDL (Color decision list) to color grading (#2635)
+b281022eb sample-page-curl: flip the backface image.
+910c2e9b0 Vulkan: implement insertEventMarker.
+9007de03d Update README.md
+1aa57fc42 Color grading: add saturation and contrast (#2627)
+7418fc022 gltfio: JNI bindings for get-by-name.
+9437907eb ModelViewer now uses a coroutine.
+91a009f94 Add new async method to ModelViewer.
+ca6b1860b Fix typescript View set/getAmbientOcclusion wrong type
+fbb8742cb Add new color grading feature: shadows/mid-tones/highlights (#2623)
+6c173489d gltfio: Add get-by-name and get-by-prefix methods.
+0abe26209 Patch hat-trie to remove exceptions.
+bd72f1fd6 Add hat-trie to third_party.
+28912b6f5 filamat-android: fix string leaks
+a3e336921 gltfio: improve performance by assuming assets are well-formed.
+524da0af2 Update RELEASE_NOTES.md
+adccf9f43 gltfio: remove details namespace
+c49ffcc35 Add channel mixer and docs to ColorGrading (#2618)
+50adc1f66 Add per-view color grading LUT (#2615)
+b77e024de Introduce ColorGrading API (#2613)
+1f77fb599 minor cleanup of PostProcessManager ctor
+bf1f32e30 gltfio: Use JobSystem to compute bounding boxes.
+2c6042bd4 Add systrace markers to gltfio.
+96c770ad9 gltfio: Use JobSystem to compute tangents.
+b1563dabe Metal: use render target height to adjust viewport when blitting (#2610)
+3ef37f892 Prep work for proper color grading (#2611)
+ede09e28e gltfio: add JavaScript bindings for instancing.
+81ea280ea gltfio: add Java bindings for instancing.
+92c017bdd Simplify WebGL context creation.
+6870d360c gltfio: Simplify FilamentInstance.
+2d62daf5e Add sample for testing glTF instancing.
+83cff3285 gltfio: Add support for instanced animation.
+8de730f76 gltfio: Add support for simple instancing.
+1f29df6da Add a note about AGP 4.0.0
+c087eb682 gltfio: Add Java / JavaScript bindings for lights.
+038c35fbd add a few systraces during init
+80fcd133d Add correct scheduleDestroy calls to Metal backend (#2600)
+62d0f9f03 perfcounters are now disabled by default
+1e65b4d8a load post process materials lazily
+f3731fa79 cleanup and code reformatting
+28f031e95 Update RELEASE_NOTES.md
+5104318ff Initialize DisplayHelper when using textureView in ModelViewer (#2598)
+68f0ab631 Implement ACES tone mapping
+62a591bc7 Add a new tone mapping option using a LUT
+0f6a06a2e Add 3D texture support to Metal
+b620a5e35 Add support for 3D textures in the vulkan backend
+0d652d61f fix typo causing textureGather to always be used
+1b033c7de Implement MRT for Metal (#2590)
+eb5eb6c82 fix EGL config selection
+0e437d244 Vulkan: fix dummy type for disabled attribs.
+9024b4afd gltfio: fix vertex attribute type mismatch.
+62ff7b7d0 Improve AO buffer upsampling
+d1ed4f837 improve SSAO quality
+d62f66495 ssao: restrict the scaling to 0.5 and 1.0
+6311b538e Add "if" when compiling subpass material.
+58bb1f61e Add JS bindings for DoF.
+8415d1840 Fix refracted objects drawing order (#2577)
+6df1265be Fix compilation issues under ubuntu 20 and latest clang (#2562)
+dc51dc197 Gradle: update old property name.
+129261028 Vulkan: fix synchronization issues with timestamps.
+e9d1e3a82 Stop using deprecated APIs for incremental builds (#2574)
+c749f7e79 Emit a one-time warning for VK_SUBOPTIMAL_KHR.
+f5068457f Update README.md
+3a3cd1c0e Better fix iOS lack of GL_EXT_multisampled_render_to_texture
+7dfe26def Vulkan: update instructions for enabling validation.
+3b3dc0af8 Vulkan: refactor the ENABLE_VALIDATION flag.
+0e38cc770 filamat: generate spirv 1.0 rather than spirv 1.3
+c0eb05872 Shadow cascades: adjust near / far planes to tightly bound scene (#2537)
+8b515ee4c Make MSAA fast(er) again on Mobile
+65e286e7d Vulkan: fix version selection.
+cdd099951 sample-page-curl: add rigidity parameter.
+432ed50cb sample-page-curl: use inverseTonemap() etc.
+d4a396d52 matinfo / matdbg: fix SPIRV version, add validation.
+97c9ad759 Metal: implement lod clamping to fix IBL bug (#2556)
+15e2447cb Vulkan: fix usage of timestamp queries.
+21ed172c5 Vulkan: add support for sync objects.
+c619f089e add support for 3D textures
+29db39b6a Use a subpass for tone mapping when possible
+b50f7dd7d Add isFrameBufferFetchSupported() to the backend API
+6df20f308 Add a private property to materials to control framebuffer_fetch
+5f34b8974 Fix buffer size bug in sample-page-curl.
+bf13f76de Fix, Metal validation error with SSR and post-processing turned off (#2550)
+92048e6b6 filagui: Fix "1 leaked FScene" warning.
+c37c04762 Fix Metal memory leak inside MetalTimerQuery (#2548)
+53a8fd94b get rid of our details namespace
+b4d16ab3b Tweak WebGL build settings.
+0b1fa7fc8 Enable Vulkan for Android by default.
+010ce1c06 Update README.md
+f6c366378 Update RELEASE_NOTES.md
+d49d0f176 Add JavaScript bindings for setVisibleLayers.
+8780d7aae Bump version to 1.7.0 (#2541)
