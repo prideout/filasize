@@ -1,6 +1,3 @@
 [submodule "bloat"]
 	path = bloat
 	url = https://github.com/evmar/bloat.git
-[submodule "webtreemap"]
-	path = webtreemap
-	url = https://github.com/evmar/webtreemap.git
