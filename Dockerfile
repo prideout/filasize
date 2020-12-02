@@ -5,10 +5,8 @@
 #   docker run -it -v `pwd`:/trees -t filasize
 #
 # Type the following commands into your shell:
-#   export BLOATPY=`pwd`/bloat/bloat.py
-#   export TARGET=libfilament-jni.so
-#   cd docs/v1.9.10
-#   nm -C -S -l $TARGET > nm.out
+#   cd docs/release_v1.4.5
+#   nm -C -S -l -D $TARGET > nm.out
 #   objdump -h $TARGET > objdump.out
 #   $BLOATPY syms > bloat.json
 #   cp ../../index.html .
@@ -45,3 +43,6 @@ RUN apt-get update
 RUN apt-get install -y yarn
 RUN yarn global add webtreemap
 RUN yarn global add typescript
+
+ENV BLOATPY=/trees/bloat/bloat.py
+ENV TARGET=libfilament-jni.so
