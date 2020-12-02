@@ -17,6 +17,7 @@ for index, commit in enumerate(commits):
 
     sha = commit.split(' ')[0]
     desc = commit[len(sha):].strip()
+    desc = desc.replace('"','')
 
     os.system(f'{cd} git checkout {sha} ; {buildcmd}')
 
